@@ -77,7 +77,6 @@
                     <div class="glass-card rounded-3xl p-8 hover-lift">
                         <div class="flex justify-between items-center mb-6">
                             <span class="text-sm font-bold text-indigo-500 uppercase tracking-wider">Métrica de Autonomía</span>
-                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded-md font-bold">Cerrada</span>
                         </div>
                         <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">¿Frecuencia de lectura por interés propio?</h2>
                         <div class="relative h-64"><canvas id="chartQ1"></canvas></div>
@@ -93,8 +92,7 @@
                     <div class="bg-indigo-50 rounded-xl p-5 border border-indigo-100">
                         <h4 class="font-bold text-indigo-900 text-sm mb-3">Puntos Clave:</h4>
                         <ul class="space-y-2 text-sm text-indigo-800">
-                            <li class="flex items-start gap-2"><span class="text-indigo-500 mt-0.5">▪</span> <strong>Dependencia Curricular:</strong> El hábito está impulsado por la coerción, no por la curiosidad.</li>
-                            <li class="flex items-start gap-2"><span class="text-indigo-500 mt-0.5">▪</span> <strong>Oportunidad:</strong> Necesidad de integrar metodologías que despierten el interés intrínseco del estudiante.</li>
+                            <li class="flex items-start gap-2"><span class="text-indigo-500 mt-0.5">▪</span> <strong>Dependencia Curricular:</strong> El hábito está impulsado fuertemente por la asignación de tareas.</li>
                         </ul>
                     </div>
                 </div>
@@ -105,24 +103,12 @@
                 <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-sky-500 border-4 border-white shadow-lg items-center justify-center z-10 font-bold text-white font-outfit">02</div>
                 
                 <div class="w-full md:w-5/12 reveal-right">
-                    <div class="glass-card rounded-3xl p-8 hover-lift">
+                    <div class="glass-card rounded-3xl p-8 hover-lift border-t-4 border-sky-500">
                         <div class="flex justify-between items-center mb-6">
                             <span class="text-sm font-bold text-sky-500 uppercase tracking-wider">Inversión de Tiempo</span>
-                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded-md font-bold">Cerrada</span>
                         </div>
-                        <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">¿Dedicación > 4 horas semanales extra?</h2>
-                        <div class="flex items-center justify-center gap-6 mb-4">
-                            <div class="text-center">
-                                <div class="text-4xl font-bold text-slate-800">83%</div>
-                                <div class="text-xs text-slate-500 uppercase font-bold tracking-wider mt-1">Menos de 4h</div>
-                            </div>
-                            <div class="h-12 w-px bg-slate-200"></div>
-                            <div class="text-center">
-                                <div class="text-4xl font-bold text-sky-500">17%</div>
-                                <div class="text-xs text-slate-500 uppercase font-bold tracking-wider mt-1">Más de 4h</div>
-                            </div>
-                        </div>
-                        <div class="relative h-48 w-full"><canvas id="chartQ2"></canvas></div>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">¿Dedicación > 4 horas extra?</h2>
+                        <div class="relative h-64 w-full"><canvas id="chartQ2"></canvas></div>
                     </div>
                 </div>
                 
@@ -131,11 +117,11 @@
                         <svg class="w-6 h-6 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         Análisis de Capacidad
                     </h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">Se observa una limitación drástica en la disponibilidad de tiempo extracurricular. La inmensa mayoría dedica un volumen marginal de horas a la lectura fuera de la facultad.</p>
+                    <p class="text-slate-600 leading-relaxed mb-6">Se observa una limitación drástica en la disponibilidad de tiempo extracurricular. El 83% destina un volumen marginal de horas a la lectura fuera de las exigencias obligatorias de la facultad.</p>
                     <div class="bg-sky-50 rounded-xl p-5 border border-sky-100 text-left">
                         <h4 class="font-bold text-sky-900 text-sm mb-3">Implicaciones:</h4>
                         <ul class="space-y-2 text-sm text-sky-800">
-                            <li class="flex items-start gap-2"><span class="text-sky-500 mt-0.5">▪</span> Los materiales recomendados (lectura opcional) tienen una tasa de apertura estadísticamente nula.</li>
+                            <li class="flex items-start gap-2"><span class="text-sky-500 mt-0.5">▪</span> El tiempo libre disponible se prioriza en actividades no vinculadas a la investigación bibliográfica.</li>
                         </ul>
                     </div>
                 </div>
@@ -149,11 +135,9 @@
                     <div class="glass-card rounded-3xl p-8 hover-lift">
                         <div class="flex justify-between items-center mb-6">
                             <span class="text-sm font-bold text-emerald-500 uppercase tracking-wider">Efectividad Académica</span>
-                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded-md font-bold">Cerrada</span>
                         </div>
-                        <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">Mejora Percibida en Vocabulario</h2>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">Mejora en Vocabulario Técnico</h2>
                         <div class="relative h-64 w-full flex items-center justify-center">
-                            <!-- Gráfico de Indicador de Logro 100% -->
                             <div class="absolute inset-0 flex flex-col items-center justify-center">
                                 <span class="text-6xl font-black text-emerald-500 font-outfit">100%</span>
                                 <span class="text-sm font-bold text-slate-500 uppercase tracking-widest mt-2">Éxito Total</span>
@@ -172,7 +156,7 @@
                     <div class="bg-emerald-50 rounded-xl p-5 border border-emerald-100">
                         <h4 class="font-bold text-emerald-900 text-sm mb-3">Valoración:</h4>
                         <ul class="space-y-2 text-sm text-emerald-800">
-                            <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">▪</span> <strong>Validación de Contenidos:</strong> La bibliografía obligatoria seleccionada para el ciclo es excepcionalmente precisa y efectiva.</li>
+                            <li class="flex items-start gap-2"><span class="text-emerald-500 mt-0.5">▪</span> <strong>Validación de Contenidos:</strong> La bibliografía obligatoria actual es excepcionalmente precisa y efectiva.</li>
                         </ul>
                     </div>
                 </div>
@@ -186,7 +170,6 @@
                     <div class="glass-card rounded-3xl p-8 hover-lift border-t-4 border-purple-500">
                         <div class="flex justify-between items-center mb-6">
                             <span class="text-sm font-bold text-purple-600 uppercase tracking-wider">Formatos Estratégicos</span>
-                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-1 rounded-md font-bold">Múltiple</span>
                         </div>
                         <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">Material de Mayor Retención</h2>
                         <div class="relative h-64 w-full"><canvas id="chartQ4"></canvas></div>
@@ -201,35 +184,58 @@
                     <p class="text-slate-600 leading-relaxed mb-6">El formato de "Caso de Estudio Empresarial" concentra el 57% de efectividad en asimilación, superando significativamente a los textos teóricos tradicionales (29%).</p>
                     <div class="bg-purple-50 rounded-xl p-5 border border-purple-100 text-left">
                         <h4 class="font-bold text-purple-900 text-sm mb-3">Conclusión Pedagógica:</h4>
-                        <p class="text-sm text-purple-800">El perfil del estudiante de administración demanda aplicabilidad. La teoría pura genera menor anclaje cognitivo comparado con escenarios reales de negocios.</p>
+                        <p class="text-sm text-purple-800">El perfil del estudiante de administración demanda aplicabilidad. La teoría pura genera menor anclaje cognitivo comparado con escenarios reales.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- ================= PREGUNTA 05 Y 06 JUNTAS (Grid) ================= -->
-            <div class="relative mb-24 w-full reveal">
-                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-slate-800 border-4 border-white shadow-lg items-center justify-center z-10 font-bold text-white font-outfit">05</div>
+            <!-- ================= PREGUNTA 05 ================= -->
+            <div class="relative flex flex-col md:flex-row items-center justify-between mb-24 w-full">
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-amber-500 border-4 border-white shadow-lg items-center justify-center z-10 font-bold text-white font-outfit">05</div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full pl-12 md:pl-0">
-                    <!-- Q5 -->
-                    <div class="glass-card rounded-3xl p-8 hover-lift">
-                        <h2 class="text-xl font-bold text-slate-800 mb-2 font-outfit">05. Factores Condicionantes</h2>
-                        <p class="text-sm text-slate-500 mb-6">¿Qué los motiva a leer?</p>
-                        <div class="relative h-56 w-full mb-6"><canvas id="chartQ5"></canvas></div>
-                        <div class="border-t border-slate-200 pt-4">
-                            <p class="text-sm text-slate-700"><strong>Equilibrio Motivacional:</strong> Existe una división exacta (50/50) entre la motivación exógena (proyectos prácticos) y endógena (curiosidad por mercado global).</p>
+                <div class="w-full md:w-5/12 reveal-left">
+                    <div class="glass-card rounded-3xl p-8 hover-lift border-t-4 border-amber-500">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-sm font-bold text-amber-500 uppercase tracking-wider">Motivación y Entorno</span>
                         </div>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">Factores Condicionantes</h2>
+                        <div class="relative h-64"><canvas id="chartQ5"></canvas></div>
                     </div>
+                </div>
+                
+                <div class="w-full md:w-5/12 mt-8 md:mt-0 reveal-right pl-12 md:pl-0">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Equilibrio Motivacional
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Existe una división exacta (50/50) en el origen del estímulo lector: una parte es impulsada exógenamente por proyectos prácticos, y la otra endógenamente por interés en tendencias globales.</p>
+                    <div class="bg-amber-50 rounded-xl p-5 border border-amber-100">
+                        <h4 class="font-bold text-amber-900 text-sm mb-3">Implicación Académica:</h4>
+                        <p class="text-sm text-amber-800">El diseño de cursos debe equilibrar las asignaciones obligatorias con lecturas de coyuntura internacional para abarcar ambos perfiles de motivación.</p>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Q6 -->
-                    <div class="glass-card rounded-3xl p-8 hover-lift">
-                        <h2 class="text-xl font-bold text-slate-800 mb-2 font-outfit">06. Áreas de Impacto Notorio</h2>
-                        <p class="text-sm text-slate-500 mb-6">Reflejo directo en calificaciones</p>
-                        <div class="relative h-56 w-full mb-6"><canvas id="chartQ6"></canvas></div>
-                        <div class="border-t border-slate-200 pt-4">
-                            <p class="text-sm text-slate-700"><strong>Transversalidad:</strong> Las áreas de capital humano y logística demuestran ser altamente dependientes de la robustez teórica del estudiante.</p>
+            <!-- ================= PREGUNTA 06 ================= -->
+            <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-24 w-full">
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-pink-500 border-4 border-white shadow-lg items-center justify-center z-10 font-bold text-white font-outfit">06</div>
+                
+                <div class="w-full md:w-5/12 reveal-right">
+                    <div class="glass-card rounded-3xl p-8 hover-lift border-t-4 border-pink-500">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-sm font-bold text-pink-500 uppercase tracking-wider">Reflejo Académico</span>
                         </div>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">Áreas de Impacto en Notas</h2>
+                        <div class="relative h-64 w-full"><canvas id="chartQ6"></canvas></div>
                     </div>
+                </div>
+                
+                <div class="w-full md:w-5/12 mt-8 md:mt-0 reveal-left pl-12 md:pl-0 md:text-right">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center justify-start md:justify-end gap-2">
+                        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        Correlación de Desempeño
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">La gestión de Recursos Humanos (33%) y las Operaciones Logísticas (33%) concentran el mayor impacto percibido, demostrando la dependencia teórica en materias de gestión de personal y procesos.</p>
                 </div>
             </div>
 
@@ -248,63 +254,93 @@
                 </div>
                 
                 <div class="w-full md:w-5/12 mt-8 md:mt-0 reveal-right pl-12 md:pl-0">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">Evaluación del Entorno</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">La métrica de exigencia presenta una moda estadística en el Nivel 7. Esto sugiere un estándar institucional que presiona constantemente al estudiante sin llegar a niveles insostenibles (9 o 10).</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        Evaluación del Entorno
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">La métrica de exigencia presenta una concentración en el decil superior. El 60% del alumnado califica la intensidad de exigencia en un nivel 7, reflejando un estándar académico constante.</p>
                 </div>
             </div>
 
-            <!-- ================= SECCIÓN CUALITATIVA (Q8, Q9, Q10) ================= -->
-            <div class="relative w-full pt-10">
-                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-rose-500 border-4 border-white shadow-lg items-center justify-center z-10 font-bold text-white font-outfit">C+</div>
+            <!-- ================= PREGUNTA 08 ================= -->
+            <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-24 w-full">
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-rose-500 border-4 border-white shadow-lg items-center justify-center z-10 font-bold text-white font-outfit">08</div>
                 
-                <div class="text-center mb-16 reveal">
-                    <span class="text-rose-500 font-bold tracking-widest text-sm uppercase block mb-2">Sección Final</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 font-outfit">Análisis Cualitativo Estructurado</h2>
-                    <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Codificación de respuestas abiertas (Preguntas 8, 9 y 10) respecto a barreras operativas, capacidad de resolución y criterio ético.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pl-12 md:pl-0">
-                    
-                    <!-- Q8: Obstáculos -->
-                    <div class="glass-card rounded-3xl p-8 flex flex-col reveal lg:col-span-1 border-t-4 border-rose-500">
-                        <h3 class="text-xl font-bold text-slate-800 mb-6 font-outfit">P.08: Barreras Operativas</h3>
-                        <div class="relative h-48 w-full mb-8"><canvas id="chartQ8"></canvas></div>
-                        <div class="mt-auto">
-                            <p class="text-sm text-slate-700 bg-rose-50 p-4 rounded-xl">La <strong>Carga de Tiempo (80%)</strong>, provocada por responsabilidades laborales simultáneas y fatiga, representa el cuello de botella principal para la investigación profunda, confirmado textualmente: <em>"Carga laboral excesiva, cansancio"</em>.</p>
+                <div class="w-full md:w-5/12 reveal-right">
+                    <div class="glass-card rounded-3xl p-8 hover-lift border-t-4 border-rose-500">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-sm font-bold text-rose-500 uppercase tracking-wider">Análisis Cualitativo</span>
                         </div>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">Barreras Operativas</h2>
+                        <div class="relative h-64 w-full"><canvas id="chartQ8"></canvas></div>
                     </div>
+                </div>
+                
+                <div class="w-full md:w-5/12 mt-8 md:mt-0 reveal-left pl-12 md:pl-0 md:text-right">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center justify-start md:justify-end gap-2">
+                        <svg class="w-6 h-6 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Cuello de Botella Limitante
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">La codificación de las respuestas abiertas identifica la restricción de tiempo (80%) como la variable absoluta que inhibe la profundización investigativa técnica diaria.</p>
+                    <div class="bg-rose-50 rounded-xl p-5 border border-rose-100 text-left">
+                        <h4 class="font-bold text-rose-900 text-sm mb-3">Evidencia Codificada:</h4>
+                        <ul class="space-y-2 text-sm text-rose-800">
+                            <li class="flex items-start gap-2"><span class="text-rose-500 mt-0.5">▪</span> Los alumnos citan el "cansancio y la carga laboral excesiva" como causantes directos de la falta de hábitos extra.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Q9 & Q10 Textos -->
-                    <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        
-                        <!-- Q9 -->
-                        <div class="bg-indigo-900 rounded-3xl p-8 text-white reveal shadow-xl relative overflow-hidden group">
-                            <div class="absolute -right-10 -top-10 opacity-10 group-hover:scale-110 transition-transform"><svg class="w-48 h-48" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13h-13L12 6.5z"/></svg></div>
-                            <span class="text-indigo-300 font-bold tracking-wider text-xs uppercase mb-2 block relative z-10">Pregunta 09</span>
-                            <h3 class="text-xl font-bold mb-6 font-outfit relative z-10">Capacidad Analítica y Resolución en Simuladores</h3>
-                            <div class="space-y-4 relative z-10">
-                                <p class="text-indigo-100 text-sm leading-relaxed border-l-2 border-indigo-400 pl-4 italic">"La lectura es mi base para analizar de manera profesional los problemas complejos."</p>
-                                <p class="text-indigo-100 text-sm leading-relaxed border-l-2 border-indigo-400 pl-4 italic">"Ayuda a la toma de decisiones frente a la incertidumbre."</p>
-                            </div>
-                            <div class="mt-8 pt-4 border-t border-indigo-800/50 relative z-10">
-                                <p class="text-sm font-semibold text-indigo-200">Insights: El estudiante reconoce a la lectura teórica como la principal herramienta mitigadora de riesgo en entornos simulados.</p>
-                            </div>
+            <!-- ================= PREGUNTA 09 ================= -->
+            <div class="relative flex flex-col md:flex-row items-center justify-between mb-24 w-full">
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-blue-600 border-4 border-white shadow-lg items-center justify-center z-10 font-bold text-white font-outfit">09</div>
+                
+                <div class="w-full md:w-5/12 reveal-left">
+                    <div class="glass-card rounded-3xl p-8 hover-lift border-t-4 border-blue-600">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-sm font-bold text-blue-600 uppercase tracking-wider">Análisis Cualitativo</span>
                         </div>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">Capacidad en Simuladores</h2>
+                        <div class="relative h-64"><canvas id="chartQ9"></canvas></div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-5/12 mt-8 md:mt-0 reveal-right pl-12 md:pl-0">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        Mitigación de Riesgos
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">El procesamiento de las respuestas textuales muestra que el 85% de los estudiantes asocia directamente la lectura teórica como una herramienta para la toma de decisiones y resolución de problemas bajo incertidumbre.</p>
+                    <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                        <h4 class="font-bold text-blue-900 text-sm mb-3">Evidencia Textual Representativa:</h4>
+                        <p class="text-sm text-blue-800 italic">"La lectura es mi base para analizar de manera profesional los problemas complejos y tomar decisiones frente a la incertidumbre."</p>
+                    </div>
+                </div>
+            </div>
 
-                        <!-- Q10 -->
-                        <div class="bg-emerald-900 rounded-3xl p-8 text-white reveal shadow-xl relative overflow-hidden group" style="transition-delay: 200ms;">
-                            <div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform"><svg class="w-48 h-48" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                            <span class="text-emerald-300 font-bold tracking-wider text-xs uppercase mb-2 block relative z-10">Pregunta 10</span>
-                            <h3 class="text-xl font-bold mb-6 font-outfit relative z-10">Construcción de Postura y Criterio Ético</h3>
-                            <div class="space-y-4 relative z-10">
-                                <p class="text-emerald-100 text-sm leading-relaxed border-l-2 border-emerald-400 pl-4 italic">"Influye de una manera impactante, ya que es nuestra guía principal para desarrollarnos."</p>
-                                <p class="text-emerald-100 text-sm leading-relaxed border-l-2 border-emerald-400 pl-4 italic">"Nos ayuda a tomar decisiones en nuestro negocio de manera ética."</p>
-                            </div>
-                            <div class="mt-8 pt-4 border-t border-emerald-800/50 relative z-10">
-                                <p class="text-sm font-semibold text-emerald-200">Insights: Se asume la lectura no solo como transmisora de habilidades duras (hard skills), sino como pilar de la gobernanza corporativa personal.</p>
-                            </div>
+            <!-- ================= PREGUNTA 10 ================= -->
+            <div class="relative flex flex-col md:flex-row-reverse items-center justify-between w-full">
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-emerald-700 border-4 border-white shadow-lg items-center justify-center z-10 font-bold text-white font-outfit">10</div>
+                
+                <div class="w-full md:w-5/12 reveal-right">
+                    <div class="glass-card rounded-3xl p-8 hover-lift border-t-4 border-emerald-700">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-sm font-bold text-emerald-700 uppercase tracking-wider">Análisis Cualitativo</span>
                         </div>
-
+                        <h2 class="text-2xl font-bold text-slate-800 mb-6 font-outfit">Postura y Criterio Ético</h2>
+                        <div class="relative h-64 w-full"><canvas id="chartQ10"></canvas></div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-5/12 mt-8 md:mt-0 reveal-left pl-12 md:pl-0 md:text-right">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center justify-start md:justify-end gap-2">
+                        <svg class="w-6 h-6 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                        Gobernanza Corporativa
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">El análisis revela que la bibliografía no solo transmite "hard skills", sino que funciona como el pilar formativo para la ética empresarial. Un 60% la señala literalmente como su guía formativa principal de conducta.</p>
+                    <div class="bg-emerald-50 rounded-xl p-5 border border-emerald-100 text-left">
+                        <h4 class="font-bold text-emerald-900 text-sm mb-3">Evidencia Textual Representativa:</h4>
+                        <p class="text-sm text-emerald-800 italic">"Influye de manera impactante, ya que es nuestra guía principal para desarrollarnos y tomar decisiones de manera ética."</p>
                     </div>
                 </div>
             </div>
@@ -316,7 +352,7 @@
     <script>
         // Animaciones de Scroll Inteligentes
         document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+            const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -340,60 +376,74 @@
         
         const datalabelsConfig = { color: '#ffffff', font: { weight: 'bold', size: 14 }, formatter: (value) => value + '%' };
 
-        // --- Gráfica Q1 (Doughnut Elegante) ---
+        // Q1 (Doughnut)
         new Chart(document.getElementById('chartQ1').getContext('2d'), {
             type: 'doughnut',
             data: { labels: ['Sin interés diario', 'Con interés autónomo'], datasets: [{ data: [67, 33], backgroundColor: ['#cbd5e1', '#4f46e5'], borderWidth: 0, hoverOffset: 10 }] },
             options: { responsive: true, maintainAspectRatio: false, cutout: '75%', plugins: { legend: { position: 'bottom', labels: { padding: 20, usePointStyle: true } }, datalabels: { display: false } } }
         });
 
-        // --- Gráfica Q2 (Bar Horizontal Invertida) ---
+        // Q2 (Bar Horizontal Invertida)
         new Chart(document.getElementById('chartQ2').getContext('2d'), {
             type: 'bar',
-            data: { labels: ['> 4 Horas', '< 4 Horas'], datasets: [{ data: [17, 83], backgroundColor: ['#0ea5e9', '#e2e8f0'], borderRadius: 6 }] },
+            data: { labels: ['> 4 Horas', '< 4 Horas'], datasets: [{ data: [17, 83], backgroundColor: ['#0ea5e9', '#cbd5e1'], borderRadius: 6 }] },
             options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'right', anchor: 'end', color: '#0f172a', formatter: (value) => value + '%' } }, scales: { x: { display: false, max: 100 }, y: { grid: { display: false }, border: {display: false} } } }
         });
 
-        // --- Gráfica Q3 (Doughnut Gauge / Anillo de progreso) ---
+        // Q3 (Gauge)
         new Chart(document.getElementById('chartQ3').getContext('2d'), {
             type: 'doughnut',
             data: { labels: ['Percibe Mejora'], datasets: [{ data: [100], backgroundColor: ['#10b981'], borderWidth: 0 }] },
             options: { responsive: true, maintainAspectRatio: false, cutout: '85%', rotation: -90, circumference: 180, plugins: { legend: { display: false }, datalabels: { display: false }, tooltip: { enabled: false } } }
         });
 
-        // --- Gráfica Q4 (Bar con Gradiente simulado) ---
+        // Q4 (Bar Vertical)
         new Chart(document.getElementById('chartQ4').getContext('2d'), {
             type: 'bar',
-            data: { labels: ['Casos Empresariales', 'Libros Teóricos', 'Artículos Indexados'], datasets: [{ data: [57, 29, 14], backgroundColor: ['#8b5cf6', '#a78bfa', '#c4b5fd'], borderRadius: 8 }] },
+            data: { labels: ['Casos', 'Teoría', 'Artículos'], datasets: [{ data: [57, 29, 14], backgroundColor: ['#8b5cf6', '#a78bfa', '#c4b5fd'], borderRadius: 8 }] },
             options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: Object.assign({}, datalabelsConfig, {align: 'bottom', anchor: 'end', color: '#fff'}) }, scales: { y: { display: false, max: 70 }, x: { grid: { display: false }, border: {display: false} } } }
         });
 
-        // --- Gráfica Q5 (Pie Clásico Ejecutivo) ---
+        // Q5 (Pie)
         new Chart(document.getElementById('chartQ5').getContext('2d'), {
             type: 'pie',
-            data: { labels: ['Proyectos Prácticos', 'Tendencias Globales'], datasets: [{ data: [50, 50], backgroundColor: ['#f59e0b', '#3b82f6'], borderWidth: 4, borderColor: '#ffffff' }] },
+            data: { labels: ['Proyectos', 'Tendencias'], datasets: [{ data: [50, 50], backgroundColor: ['#f59e0b', '#3b82f6'], borderWidth: 4, borderColor: '#ffffff' }] },
             options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, padding: 15 } }, datalabels: datalabelsConfig } }
         });
 
-        // --- Gráfica Q6 (Polar Area - Novedoso) ---
+        // Q6 (Polar Area)
         new Chart(document.getElementById('chartQ6').getContext('2d'), {
             type: 'polarArea',
-            data: { labels: ['RRHH', 'Logística', 'Contabilidad', 'Marketing'], datasets: [{ data: [33, 33, 17, 17], backgroundColor: ['rgba(99, 102, 241, 0.8)', 'rgba(244, 63, 94, 0.8)', 'rgba(139, 92, 246, 0.8)', 'rgba(236, 72, 153, 0.8)'] }] },
+            data: { labels: ['RRHH', 'Logística', 'Contabilidad', 'Marketing'], datasets: [{ data: [33, 33, 17, 17], backgroundColor: ['rgba(236, 72, 153, 0.8)', 'rgba(244, 63, 94, 0.8)', 'rgba(99, 102, 241, 0.8)', 'rgba(139, 92, 246, 0.8)'] }] },
             options: { responsive: true, maintainAspectRatio: false, scales: { r: { display: false } }, plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, padding: 15 } }, datalabels: { display: false } } }
         });
 
-        // --- Gráfica Q7 (Stepped / Bar simple) ---
+        // Q7 (Bar Vertical)
         new Chart(document.getElementById('chartQ7').getContext('2d'), {
             type: 'bar',
             data: { labels: ['Nivel 3', 'Nivel 4', 'Nivel 7'], datasets: [{ data: [1, 1, 3], backgroundColor: '#14b8a6', borderRadius: 4 }] },
             options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#14b8a6', formatter: (value) => value + ' Votos' } }, scales: { y: { display: false, max: 4 }, x: { grid: { display: false }, border: {display: false} } } }
         });
 
-        // --- Gráfica Q8 (Horizontal) ---
+        // Q8 (Horizontal Bar)
         new Chart(document.getElementById('chartQ8').getContext('2d'), {
             type: 'bar',
-            data: { labels: ['Falta Tiempo', 'Textos Extensos'], datasets: [{ data: [80, 20], backgroundColor: '#f43f5e', borderRadius: 6 }] },
+            data: { labels: ['Falta de Tiempo', 'Textos Extensos'], datasets: [{ data: [80, 20], backgroundColor: '#f43f5e', borderRadius: 6 }] },
             options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'start', anchor: 'end', color: '#ffffff', formatter: (value) => value + '%' } }, scales: { x: { display: false, max: 100 }, y: { grid: { display: false }, border: {display: false} } } }
+        });
+
+        // Q9 (Doughnut - Simuladores)
+        new Chart(document.getElementById('chartQ9').getContext('2d'), {
+            type: 'doughnut',
+            data: { labels: ['Resolución de Problemas', 'Toma de Decisiones', 'Retención'], datasets: [{ data: [45, 40, 15], backgroundColor: ['#2563eb', '#60a5fa', '#bfdbfe'], borderWidth: 0, hoverOffset: 5 }] },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, padding: 10 } }, datalabels: { display: false } } }
+        });
+
+        // Q10 (Barra Apilada/Simple - Ética)
+        new Chart(document.getElementById('chartQ10').getContext('2d'), {
+            type: 'bar',
+            data: { labels: ['Guía Fundamental de Desarrollo', 'Aplicación en Decisiones Éticas'], datasets: [{ data: [60, 40], backgroundColor: ['#047857', '#34d399'], borderRadius: 6 }] },
+            options: { indexAxis: 'x', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#047857', formatter: (value) => value + '%' } }, scales: { y: { display: false, max: 80 }, x: { grid: { display: false } } } }
         });
     </script>
 </body>
