@@ -15,7 +15,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
         h1, h2, h3, .font-outfit { font-family: 'Outfit', sans-serif; }
-        /* Animaciones para las pestañas y tarjetas */
         .fade-in { animation: fadeIn 0.4s ease-in-out; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -26,7 +25,7 @@
 </head>
 <body class="text-slate-800 antialiased min-h-screen flex flex-col">
 
-    <!-- Encabezado con Gradiente -->
+    <!-- Encabezado con Gradiente y Botón -->
     <header class="bg-gradient-to-r from-slate-900 to-slate-800 text-white pt-10 pb-16 px-4 md:px-8">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex flex-col md:flex-row items-center gap-6">
@@ -38,8 +37,15 @@
                     <p class="text-slate-300 text-lg">Estudiantes de Administración - UVG</p>
                 </div>
             </div>
-            <div class="px-5 py-2.5 bg-indigo-500/20 border border-indigo-400/30 text-indigo-200 rounded-full font-semibold text-sm backdrop-blur-sm">
-                Dashboard Interactivo 2026
+            <div class="flex flex-col gap-3">
+                <div class="px-5 py-2.5 bg-indigo-500/20 border border-indigo-400/30 text-indigo-200 rounded-full font-semibold text-sm backdrop-blur-sm text-center">
+                    Dashboard Interactivo
+                </div>
+                <!-- Botón para ir al dashboard desglosado -->
+                <a href="Dashboard_Desglosado_UVG.html" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-semibold text-sm shadow-md transition-colors text-center flex items-center justify-center gap-2">
+                    Ver Reporte Desglosado
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
             </div>
         </div>
     </header>
@@ -65,45 +71,42 @@
         <!-- ================= SECCIÓN 1: PREGUNTAS CERRADAS ================= -->
         <div id="cerradas" class="tab-content fade-in grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <!-- Tarjeta 1 -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col card-hover transition-all duration-300 border-t-4 border-t-red-500">
                 <div class="mb-4">
-                    <span class="bg-red-50 text-red-600 text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">DATO: 67% NO LEE</span>
                     <h2 class="text-lg font-bold text-slate-800 leading-tight">¿Lee diariamente por interés propio?</h2>
                 </div>
                 <div class="relative h-56 w-full mb-6 mt-2">
                     <canvas id="chartInteres"></canvas>
                 </div>
                 <div class="bg-slate-50 rounded-xl p-4 mt-auto">
-                    <p class="text-sm text-slate-600">La tendencia principal es <strong>no</strong> leer diariamente por iniciativa personal; el hábito está ligado a la exigencia académica.</p>
+                    <h3 class="font-semibold text-slate-800 text-sm mb-1">Conclusión:</h3>
+                    <p class="text-sm text-slate-600">El 67% de los estudiantes indica no tener un hábito de lectura diario por interés propio. La lectura se realiza principalmente en función de la exigencia académica.</p>
                 </div>
             </div>
 
-            <!-- Tarjeta 2 -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col card-hover transition-all duration-300 border-t-4 border-t-sky-500">
                 <div class="mb-4">
-                    <span class="bg-sky-50 text-sky-600 text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">DATO: 83% NO</span>
                     <h2 class="text-lg font-bold text-slate-800 leading-tight">¿Dedica > 4 horas semanales extra?</h2>
                 </div>
                 <div class="relative h-56 w-full mb-6 mt-2">
                     <canvas id="chartHoras"></canvas>
                 </div>
                 <div class="bg-slate-50 rounded-xl p-4 mt-auto">
-                    <p class="text-sm text-slate-600">Una gran mayoría no invierte tiempo extra significativo, limitándose a los entregables obligatorios.</p>
+                    <h3 class="font-semibold text-slate-800 text-sm mb-1">Conclusión:</h3>
+                    <p class="text-sm text-slate-600">El 83% de los encuestados destina menos de cuatro horas semanales a la lectura extracurricular, priorizando el cumplimiento de entregables.</p>
                 </div>
             </div>
 
-            <!-- Tarjeta 3 -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col card-hover transition-all duration-300 border-t-4 border-t-emerald-500 md:col-span-2 lg:col-span-1">
                 <div class="mb-4">
-                    <span class="bg-emerald-50 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">100% DE ÉXITO</span>
                     <h2 class="text-lg font-bold text-slate-800 leading-tight">¿Mejora en vocabulario técnico?</h2>
                 </div>
                 <div class="relative h-56 w-full mb-6 mt-2">
                     <canvas id="chartVocabulario"></canvas>
                 </div>
                 <div class="bg-slate-50 rounded-xl p-4 mt-auto">
-                    <p class="text-sm text-slate-600">El material asignado es <strong>altamente efectivo</strong>: todos los alumnos perciben una mejora en su lenguaje profesional.</p>
+                    <h3 class="font-semibold text-slate-800 text-sm mb-1">Conclusión:</h3>
+                    <p class="text-sm text-slate-600">El 100% de los participantes reporta percibir una mejora en su vocabulario técnico tras completar las lecturas asignadas en el ciclo.</p>
                 </div>
             </div>
         </div>
@@ -111,52 +114,56 @@
         <!-- ================= SECCIÓN 2: OPCIÓN MÚLTIPLE ================= -->
         <div id="multiple" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- Tarjeta 4 -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col card-hover transition-all duration-300 border-t-4 border-t-purple-500">
                 <div class="flex justify-between items-start mb-4">
                     <h2 class="text-xl font-bold text-slate-800 w-2/3">Material de Mayor Retención</h2>
-                    <span class="bg-purple-50 text-purple-600 text-xs font-bold px-3 py-1 rounded-full text-right">CASOS PRÁCTICOS</span>
                 </div>
                 <div class="relative h-64 w-full mb-6">
                     <canvas id="chartMaterial"></canvas>
                 </div>
-                <p class="text-sm text-slate-600 bg-slate-50 p-4 rounded-xl mt-auto">Más de la mitad (57%) asimila mejor los conceptos a través de <strong>Casos de estudio empresariales</strong>, superando a la teoría pura.</p>
+                <div class="bg-slate-50 rounded-xl p-4 mt-auto">
+                    <h3 class="font-semibold text-slate-800 text-sm mb-1">Conclusión:</h3>
+                    <p class="text-sm text-slate-600">El 57% de los estudiantes señala que los casos de estudio empresariales generan la mayor retención de conceptos estratégicos.</p>
+                </div>
             </div>
 
-            <!-- Tarjeta 5 -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col card-hover transition-all duration-300 border-t-4 border-t-amber-500">
                 <div class="flex justify-between items-start mb-4">
                     <h2 class="text-xl font-bold text-slate-800 w-2/3">Factor que Condiciona la Lectura</h2>
-                    <span class="bg-amber-50 text-amber-600 text-xs font-bold px-3 py-1 rounded-full text-right">DIVIDIDO 50/50</span>
                 </div>
                 <div class="relative h-64 w-full mb-6">
                     <canvas id="chartFactor"></canvas>
                 </div>
-                <p class="text-sm text-slate-600 bg-slate-50 p-4 rounded-xl mt-auto">Los motores de lectura están empatados: la curiosidad por <strong>tendencias globales</strong> vs la presión por <strong>proyectos prácticos</strong>.</p>
+                <div class="bg-slate-50 rounded-xl p-4 mt-auto">
+                    <h3 class="font-semibold text-slate-800 text-sm mb-1">Conclusión:</h3>
+                    <p class="text-sm text-slate-600">El factor condicionante se divide en un 50% para el interés en tendencias globales y un 50% para la carga académica de proyectos.</p>
+                </div>
             </div>
 
-            <!-- Tarjeta 6 -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col card-hover transition-all duration-300 border-t-4 border-t-indigo-500">
                 <div class="flex justify-between items-start mb-4">
                     <h2 class="text-xl font-bold text-slate-800 w-2/3">Áreas con Mayor Impacto</h2>
-                    <span class="bg-indigo-50 text-indigo-600 text-xs font-bold px-3 py-1 rounded-full text-right">LÍDER: RRHH</span>
                 </div>
                 <div class="relative h-64 w-full mb-6">
                     <canvas id="chartAreas"></canvas>
                 </div>
-                <p class="text-sm text-slate-600 bg-slate-50 p-4 rounded-xl mt-auto">La gestión de personal (RRHH y Liderazgo) y la Logística son las áreas donde la lectura complementaria se refleja más en notas.</p>
+                <div class="bg-slate-50 rounded-xl p-4 mt-auto">
+                    <h3 class="font-semibold text-slate-800 text-sm mb-1">Conclusión:</h3>
+                    <p class="text-sm text-slate-600">Las áreas de Recursos Humanos y Logística representan conjuntamente el 66% de las materias donde la lectura influye notoriamente en calificaciones.</p>
+                </div>
             </div>
 
-            <!-- Tarjeta 7 -->
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col card-hover transition-all duration-300 border-t-4 border-t-teal-500">
                 <div class="flex justify-between items-start mb-4">
                     <h2 class="text-xl font-bold text-slate-800 w-2/3">Intensidad de Exigencia (1-10)</h2>
-                    <span class="bg-teal-50 text-teal-600 text-xs font-bold px-3 py-1 rounded-full text-right">EXIGENCIA MEDIA-ALTA</span>
                 </div>
                 <div class="relative h-64 w-full mb-6">
                     <canvas id="chartIntensidad"></canvas>
                 </div>
-                <p class="text-sm text-slate-600 bg-slate-50 p-4 rounded-xl mt-auto">La exigencia se concentra en los niveles altos (7), aunque depende del criterio de cada catedrático y curso.</p>
+                <div class="bg-slate-50 rounded-xl p-4 mt-auto">
+                    <h3 class="font-semibold text-slate-800 text-sm mb-1">Conclusión:</h3>
+                    <p class="text-sm text-slate-600">El 60% de los estudiantes evalúa la exigencia de lectura complementaria en un nivel 7 sobre 10 en sus cursos actuales.</p>
+                </div>
             </div>
         </div>
 
@@ -164,20 +171,21 @@
         <div id="abiertas" class="tab-content hidden">
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Gráfica de Obstáculos (1/3 ancho) -->
+                <!-- Gráfica de Obstáculos -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col card-hover transition-all duration-300 lg:col-span-1 border-t-4 border-t-rose-500">
                     <h2 class="text-xl font-bold text-slate-800 mb-2">Obstáculos Principales</h2>
                     <p class="text-sm text-slate-500 mb-4">Análisis de respuestas cualitativas</p>
                     <div class="relative h-64 w-full mb-6">
                         <canvas id="chartObstaculos"></canvas>
                     </div>
-                    <p class="text-sm text-slate-600 mt-auto">La <strong>falta de tiempo</strong> (carga laboral, cansancio) domina por completo como barrera principal (80%).</p>
+                    <div class="bg-slate-50 rounded-xl p-4 mt-auto">
+                        <h3 class="font-semibold text-slate-800 text-sm mb-1">Conclusión:</h3>
+                        <p class="text-sm text-slate-600">El 80% de los alumnos identifica la falta de tiempo, derivada de factores laborales y académicos, como el obstáculo principal para profundizar en sus investigaciones.</p>
+                    </div>
                 </div>
 
-                <!-- Análisis de Respuestas Cualitativas (2/3 ancho) -->
+                <!-- Análisis de Respuestas Cualitativas -->
                 <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    
-                    <!-- Capacidad Analítica -->
                     <div class="bg-indigo-50 rounded-2xl p-6 border border-indigo-100 card-hover transition-all">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="bg-indigo-600 text-white p-2 rounded-lg">
@@ -185,7 +193,7 @@
                             </div>
                             <h3 class="font-bold text-indigo-900">Capacidad Analítica</h3>
                         </div>
-                        <p class="text-sm text-indigo-800/80 mb-4 italic">¿Cómo influye la lectura en simuladores empresariales y problemas complejos?</p>
+                        <p class="text-sm text-indigo-800/80 mb-4 italic">¿Cómo influye la lectura en simuladores empresariales?</p>
                         <div class="space-y-3">
                             <div class="bg-white p-4 rounded-xl shadow-sm text-sm text-slate-700 border-l-4 border-indigo-400">
                                 "La lectura es mi base para analizar de manera profesional los problemas complejos."
@@ -196,7 +204,6 @@
                         </div>
                     </div>
 
-                    <!-- Dilemas Éticos -->
                     <div class="bg-emerald-50 rounded-2xl p-6 border border-emerald-100 card-hover transition-all">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="bg-emerald-600 text-white p-2 rounded-lg">
@@ -204,7 +211,7 @@
                             </div>
                             <h3 class="font-bold text-emerald-900">Dilemas Éticos</h3>
                         </div>
-                        <p class="text-sm text-emerald-800/80 mb-4 italic">¿Cómo construye la postura crítica frente a dilemas de negocios?</p>
+                        <p class="text-sm text-emerald-800/80 mb-4 italic">¿Cómo construye la postura frente a dilemas de negocios?</p>
                         <div class="space-y-3">
                             <div class="bg-white p-4 rounded-xl shadow-sm text-sm text-slate-700 border-l-4 border-emerald-400">
                                 "De una manera impactante, ya que es nuestra guía principal para desarrollarnos."
@@ -214,25 +221,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Citas sobre Obstáculos -->
-                    <div class="bg-rose-50 rounded-2xl p-6 border border-rose-100 card-hover transition-all md:col-span-2">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="bg-rose-600 text-white p-2 rounded-lg">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h3 class="font-bold text-rose-900">Voces de los Estudiantes: Las Barreras</h3>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="bg-white p-4 rounded-xl shadow-sm text-sm text-slate-700 border-l-4 border-rose-400">
-                                "Carga laboral excesiva, cansancio, tiempo corto."
-                            </div>
-                            <div class="bg-white p-4 rounded-xl shadow-sm text-sm text-slate-700 border-l-4 border-rose-400">
-                                "La falta de organización de tiempo y contenidos muy extensos."
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -241,92 +229,30 @@
 
     <!-- Script de Interactividad y Gráficas -->
     <script>
-        // Lógica de las Pestañas (Tabs)
         function switchTab(tabId, btnElement) {
-            // Ocultar todos los contenidos
-            document.querySelectorAll('.tab-content').forEach(el => {
-                el.classList.add('hidden');
-                el.classList.remove('fade-in'); // Reset animation
-            });
-            // Quitar estilos activos de todos los botones
-            document.querySelectorAll('.tab-btn').forEach(el => {
-                el.classList.remove('bg-indigo-600', 'text-white', 'shadow-md');
-                el.classList.add('bg-transparent', 'text-slate-600', 'hover:bg-slate-50');
-            });
-
-            // Mostrar el contenido seleccionado
+            document.querySelectorAll('.tab-content').forEach(el => { el.classList.add('hidden'); el.classList.remove('fade-in'); });
+            document.querySelectorAll('.tab-btn').forEach(el => { el.classList.remove('bg-indigo-600', 'text-white', 'shadow-md'); el.classList.add('bg-transparent', 'text-slate-600', 'hover:bg-slate-50'); });
             const activeContent = document.getElementById(tabId);
             activeContent.classList.remove('hidden');
-            // Trigger reflow for animation
             void activeContent.offsetWidth; 
             activeContent.classList.add('fade-in');
-
-            // Aplicar estilos activos al botón presionado
             btnElement.classList.remove('bg-transparent', 'text-slate-600', 'hover:bg-slate-50');
             btnElement.classList.add('bg-indigo-600', 'text-white', 'shadow-md');
         }
 
-        // --- CONFIGURACIÓN DE GRÁFICAS (CHART.JS) ---
         Chart.register(ChartDataLabels);
         Chart.defaults.font.family = "'Inter', sans-serif";
         Chart.defaults.color = '#64748b';
         Chart.defaults.plugins.datalabels = { color: '#ffffff', font: { weight: 'bold', size: 14 }, formatter: (value) => value + '%' };
 
-        // 1. Cerrada: Interés (Doughnut)
-        new Chart(document.getElementById('chartInteres').getContext('2d'), {
-            type: 'doughnut',
-            data: { labels: ['Sí', 'No'], datasets: [{ data: [33, 67], backgroundColor: ['#ef4444', '#cbd5e1'], borderWidth: 0 }] },
-            options: { responsive: true, maintainAspectRatio: false, cutout: '65%', plugins: { legend: { position: 'bottom' } } }
-        });
-
-        // 2. Cerrada: Horas (Doughnut)
-        new Chart(document.getElementById('chartHoras').getContext('2d'), {
-            type: 'doughnut',
-            data: { labels: ['Sí', 'No'], datasets: [{ data: [17, 83], backgroundColor: ['#0ea5e9', '#cbd5e1'], borderWidth: 0 }] },
-            options: { responsive: true, maintainAspectRatio: false, cutout: '65%', plugins: { legend: { position: 'bottom' } } }
-        });
-
-        // 3. Cerrada: Vocabulario (Bar)
-        new Chart(document.getElementById('chartVocabulario').getContext('2d'), {
-            type: 'bar',
-            data: { labels: ['Sí Mejoró', 'No Mejoró'], datasets: [{ data: [100, 0], backgroundColor: ['#10b981', '#f1f5f9'], borderRadius: 6 }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#10b981', offset: -4 } }, scales: { y: { display: false, max: 120 }, x: { grid: { display: false }, border: {display: false} } } }
-        });
-
-        // 4. Múltiple: Material (Bar)
-        new Chart(document.getElementById('chartMaterial').getContext('2d'), {
-            type: 'bar',
-            data: { labels: ['Casos', 'Libros', 'Artículos'], datasets: [{ data: [57, 29, 14], backgroundColor: '#a855f7', borderRadius: 4 }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#a855f7' } }, scales: { y: { display: false, max: 70 }, x: { grid: { display: false } } } }
-        });
-
-        // 5. Múltiple: Factor (Pie)
-        new Chart(document.getElementById('chartFactor').getContext('2d'), {
-            type: 'pie',
-            data: { labels: ['Carga académica', 'Interés personal'], datasets: [{ data: [50, 50], backgroundColor: ['#f59e0b', '#3b82f6'], borderWidth: 2, borderColor: '#fff' }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
-        });
-
-        // 6. Múltiple: Áreas (Pie)
-        new Chart(document.getElementById('chartAreas').getContext('2d'), {
-            type: 'pie',
-            data: { labels: ['RRHH', 'Operaciones', 'Contabilidad', 'Mercadotecnia'], datasets: [{ data: [33, 33, 17, 17], backgroundColor: ['#6366f1', '#f43f5e', '#8b5cf6', '#ec4899'], borderWidth: 2, borderColor: '#fff' }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
-        });
-
-        // 7. Múltiple: Intensidad (Bar)
-        new Chart(document.getElementById('chartIntensidad').getContext('2d'), {
-            type: 'bar',
-            data: { labels: ['Nivel 3', 'Nivel 4', 'Nivel 7'], datasets: [{ data: [1, 1, 3], backgroundColor: '#14b8a6', borderRadius: 4 }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#14b8a6', formatter: (value) => value + ' Votos' } }, scales: { y: { display: false, max: 4 }, x: { grid: { display: false } } } }
-        });
-
-        // 8. Abiertas: Obstáculos (Horizontal Bar)
-        new Chart(document.getElementById('chartObstaculos').getContext('2d'), {
-            type: 'bar',
-            data: { labels: ['Falta Tiempo', 'Textos Extensos'], datasets: [{ data: [80, 20], backgroundColor: '#f43f5e', borderRadius: 4 }] },
-            options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#f43f5e' } }, scales: { x: { display: false, max: 100 }, y: { grid: { display: false } } } }
-        });
+        new Chart(document.getElementById('chartInteres').getContext('2d'), { type: 'doughnut', data: { labels: ['Sí', 'No'], datasets: [{ data: [33, 67], backgroundColor: ['#ef4444', '#cbd5e1'], borderWidth: 0 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '65%', plugins: { legend: { position: 'bottom' } } } });
+        new Chart(document.getElementById('chartHoras').getContext('2d'), { type: 'doughnut', data: { labels: ['Sí', 'No'], datasets: [{ data: [17, 83], backgroundColor: ['#0ea5e9', '#cbd5e1'], borderWidth: 0 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '65%', plugins: { legend: { position: 'bottom' } } } });
+        new Chart(document.getElementById('chartVocabulario').getContext('2d'), { type: 'bar', data: { labels: ['Sí Mejoró', 'No Mejoró'], datasets: [{ data: [100, 0], backgroundColor: ['#10b981', '#f1f5f9'], borderRadius: 6 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#10b981', offset: -4 } }, scales: { y: { display: false, max: 120 }, x: { grid: { display: false }, border: {display: false} } } } });
+        new Chart(document.getElementById('chartMaterial').getContext('2d'), { type: 'bar', data: { labels: ['Casos', 'Libros', 'Artículos'], datasets: [{ data: [57, 29, 14], backgroundColor: '#a855f7', borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#a855f7' } }, scales: { y: { display: false, max: 70 }, x: { grid: { display: false } } } } });
+        new Chart(document.getElementById('chartFactor').getContext('2d'), { type: 'pie', data: { labels: ['Carga académica', 'Interés personal'], datasets: [{ data: [50, 50], backgroundColor: ['#f59e0b', '#3b82f6'], borderWidth: 2, borderColor: '#fff' }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } } });
+        new Chart(document.getElementById('chartAreas').getContext('2d'), { type: 'pie', data: { labels: ['RRHH', 'Operaciones', 'Contabilidad', 'Mercadotecnia'], datasets: [{ data: [33, 33, 17, 17], backgroundColor: ['#6366f1', '#f43f5e', '#8b5cf6', '#ec4899'], borderWidth: 2, borderColor: '#fff' }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } } });
+        new Chart(document.getElementById('chartIntensidad').getContext('2d'), { type: 'bar', data: { labels: ['Nivel 3', 'Nivel 4', 'Nivel 7'], datasets: [{ data: [1, 1, 3], backgroundColor: '#14b8a6', borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#14b8a6', formatter: (value) => value + ' Votos' } }, scales: { y: { display: false, max: 4 }, x: { grid: { display: false } } } } });
+        new Chart(document.getElementById('chartObstaculos').getContext('2d'), { type: 'bar', data: { labels: ['Falta Tiempo', 'Textos Extensos'], datasets: [{ data: [80, 20], backgroundColor: '#f43f5e', borderRadius: 4 }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'end', anchor: 'end', color: '#f43f5e' } }, scales: { x: { display: false, max: 100 }, y: { grid: { display: false } } } } });
     </script>
 </body>
 </html>
