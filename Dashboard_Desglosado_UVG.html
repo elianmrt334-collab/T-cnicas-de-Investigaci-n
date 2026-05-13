@@ -54,12 +54,21 @@
                     <p class="text-slate-400 text-lg font-light border-l-2 border-indigo-500 pl-3">Estudiantes de Administración - Metodología y Resultados</p>
                 </div>
             </div>
-            <div>
-                <a href="index.html" class="px-6 py-3 bg-white hover:bg-slate-100 text-slate-900 rounded-xl font-bold text-sm shadow-md transition-all flex items-center gap-2 hover:-translate-y-1">
+            
+            <!-- CONTENEDOR DE BOTONES (VOLVER Y LOGIN) -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="index.html" class="px-6 py-3 bg-white hover:bg-slate-100 text-slate-900 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 hover:-translate-y-1">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                     Volver al Inicio
                 </a>
+                
+                <!-- NUEVO BOTÓN DE LOGIN -->
+                <a href="Panel_Administracion.html" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 hover:-translate-y-1 border border-indigo-500">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+                    Login
+                </a>
             </div>
+            
         </div>
     </header>
 
@@ -84,7 +93,7 @@
                         <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         Lectura guiada por la evaluación
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">El objetivo es evaluar la presencia del hábito de lectura por iniciativa propia, lo que permite explorar si la lectura se asume como una actividad voluntaria, lo que aporta información sobre el desarrollo de hábitos culturales y formativos.</p>
+                    <p id="text-q1" class="text-slate-600 leading-relaxed text-lg">El objetivo es evaluar la presencia del hábito de lectura por iniciativa propia, lo que permite explorar si la lectura se asume como una actividad voluntaria, lo que aporta información sobre el desarrollo de hábitos culturales y formativos.</p>
                 </div>
             </div>
 
@@ -104,7 +113,7 @@
                         <svg class="w-6 h-6 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         Priorización de entregables
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">Tiene como finalidad reconocer si los estudiantes invierten tiempo extra fuera de lo obligatorio para reforzar su formación académica.</p>
+                    <p id="text-q2" class="text-slate-600 leading-relaxed text-lg">Tiene como finalidad reconocer si los estudiantes invierten tiempo extra fuera de lo obligatorio para reforzar su formación académica.</p>
                 </div>
             </div>
 
@@ -129,7 +138,7 @@
                         <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         Impacto en la expresión empresarial
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">La pregunta evalúa si los participantes reconocen una mejora en su comprensión y uso de términos técnicos como resultado de las lecturas realizadas.</p>
+                    <p id="text-q3" class="text-slate-600 leading-relaxed text-lg">La pregunta evalúa si los participantes reconocen una mejora en su comprensión y uso de términos técnicos como resultado de las lecturas realizadas.</p>
                 </div>
             </div>
 
@@ -149,7 +158,7 @@
                         <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-.586-1.414l-4.5-4.5A2 2 0 0012.586 3H12"></path></svg>
                         Preferencia por la metodología aplicada
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">Su propósito es identificar qué fuentes de información favorecen mejor al proceso de aprendizaje y asimilación de contenido.</p>
+                    <p id="text-q4" class="text-slate-600 leading-relaxed text-lg">Su propósito es identificar qué fuentes de información favorecen mejor al proceso de aprendizaje y asimilación de contenido.</p>
                 </div>
             </div>
 
@@ -169,7 +178,7 @@
                         <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         Motivaciones equilibradas
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">Permite analizar factores internos y externos que afectan el hábito lector de los estudiantes y que además condicionan la frecuencia y el interés por la lectura.</p>
+                    <p id="text-q5" class="text-slate-600 leading-relaxed text-lg">Permite analizar factores internos y externos que afectan el hábito lector de los estudiantes y que además condicionan la frecuencia y el interés por la lectura.</p>
                 </div>
             </div>
 
@@ -189,7 +198,7 @@
                         <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                         Impacto por materias específicas
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">Permite analizar la relación entre el hábito lector y la mejora de calificaciones en distintas áreas de formación administrativa.</p>
+                    <p id="text-q6" class="text-slate-600 leading-relaxed text-lg">Permite analizar la relación entre el hábito lector y la mejora de calificaciones en distintas áreas de formación administrativa.</p>
                 </div>
             </div>
 
@@ -209,7 +218,7 @@
                         <svg class="w-6 h-6 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
                         Nivel de exigencia general
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">En conjunto, estas respuestas permiten comprender cómo la exigencia de lectura de material complementario influye en la dinámica académica, evidenciando el nivel de demanda que enfrentan los estudiantes. Además, aportan información sobre la importancia que los docentes otorgan a la lectura como herramienta de aprendizaje, lo cual puede incidir en el desarrollo de habilidades analíticas, comprensión de contenidos y fortalecimiento del hábito lector en el contexto educativo.</p>
+                    <p id="text-q7" class="text-slate-600 leading-relaxed text-lg">En conjunto, estas respuestas permiten comprender cómo la exigencia de lectura de material complementario influye en la dinámica académica, evidenciando el nivel de demanda que enfrentan los estudiantes. Además, aportan información sobre la importancia que los docentes otorgan a la lectura como herramienta de aprendizaje, lo cual puede incidir en el desarrollo de habilidades analíticas, comprensión de contenidos y fortalecimiento del hábito lector en el contexto educativo.</p>
                 </div>
             </div>
 
@@ -229,7 +238,7 @@
                         <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                         Gestión entre estudio y trabajo
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">Su propósito es comprender cómo los estudiantes vinculan la lectura constante con su desempeño en la interpretación, análisis y resolución de problemas complejos.</p>
+                    <p id="text-q8" class="text-slate-600 leading-relaxed text-lg">Su propósito es comprender cómo los estudiantes vinculan la lectura constante con su desempeño en la interpretación, análisis y resolución de problemas complejos.</p>
                 </div>
             </div>
 
@@ -249,7 +258,7 @@
                         <svg class="w-6 h-6 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
                         Seguridad en la toma de decisiones
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">Busca analizar cómo las lecturas de la carrera influyen en el desarrollo del pensamiento crítico de los estudiantes, así como en su capacidad para reflexionar y tomar una postura frente a los dilemas éticos en el ámbito empresarial.</p>
+                    <p id="text-q9" class="text-slate-600 leading-relaxed text-lg">Busca analizar cómo las lecturas de la carrera influyen en el desarrollo del pensamiento crítico de los estudiantes, así como en su capacidad para reflexionar y tomar una postura frente a los dilemas éticos en el ámbito empresarial.</p>
                 </div>
             </div>
 
@@ -269,7 +278,7 @@
                         <svg class="w-6 h-6 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         Construcción de un perfil integral
                     </h3>
-                    <p class="text-slate-600 leading-relaxed text-lg">Se incluye para conocer los factores que limitan el desarrollo de hábitos de lectura especializada en el ámbito académico.</p>
+                    <p id="text-q10" class="text-slate-600 leading-relaxed text-lg">Se incluye para conocer los factores que limitan el desarrollo de hábitos de lectura especializada en el ámbito académico.</p>
                 </div>
             </div>
 
@@ -372,6 +381,19 @@
             type: 'bar',
             data: { labels: ['Tiempo y Cansancio', 'Textos Extensos'], datasets: [{ data: [80, 20], backgroundColor: '#f43f5e', borderRadius: 6 }] },
             options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, datalabels: { align: 'start', anchor: 'end', color: '#ffffff', formatter: (value) => value + '%' } }, scales: { x: { display: false, max: 100 }, y: { grid: { display: false }, border: {display: false} } } }
+        });
+
+        // === CONEXIÓN CON PANEL DE ADMINISTRACIÓN CMS ===
+        document.addEventListener('DOMContentLoaded', () => {
+            const cmsData = JSON.parse(localStorage.getItem('uvg_cms_data'));
+            if (cmsData && cmsData.desglosado) {
+                for (let i = 1; i <= 10; i++) {
+                    const textEl = document.getElementById('text-q' + i);
+                    if (textEl && cmsData.desglosado['q' + i]) {
+                        textEl.innerText = cmsData.desglosado['q' + i];
+                    }
+                }
+            }
         });
     </script>
 </body>
