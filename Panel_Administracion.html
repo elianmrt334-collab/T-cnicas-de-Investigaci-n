@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS - Panel de Administración UVG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }</style>
+</head>
+<body class="text-slate-800">
+
+    <!-- PANTALLA DE LOGIN -->
+    <div id="login-view" class="min-h-screen flex items-center justify-center bg-slate-900 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-indigo-600 opacity-20 blur-[100px] rounded-full w-96 h-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md relative z-10">
+            <div class="text-center mb-8">
+                <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                </div>
+                <h1 class="text-2xl font-bold text-slate-800">Acceso Restringido</h1>
+                <p class="text-sm text-slate-500 mt-2">Módulo de Administración de Contenido</p>
+            </div>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Usuario</label>
+                    <input type="text" id="user" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="Ingresa tu usuario">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Contraseña</label>
+                    <input type="password" id="pass" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="••••••••">
+                </div>
+                <button onclick="verificarLogin()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg mt-4 transition-colors">
+                    Iniciar Sesión
+                </button>
+                <p id="error-msg" class="text-red-500 text-sm text-center mt-3 hidden font-semibold">Credenciales incorrectas.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANTALLA DEL CMS (OCULTA HASTA LOGIN) -->
+    <div id="admin-view" class="hidden min-h-screen pb-24">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <span class="bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded">ADMIN</span>
+                    <h1 class="font-bold text-xl text-slate-800">Gestor de Contenidos UVG</h1>
+                </div>
+                <div class="flex gap-4">
+                    <button onclick="guardarCambios()" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2 rounded-lg font-semibold flex items-center gap-2 transition-colors shadow-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                        Guardar Cambios
+                    </button>
+                    <button onclick="cerrarSesion()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-2 rounded-lg font-semibold transition-colors">Salir</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido -->
+        <main class="max-w-6xl mx-auto px-6 mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Columna Izquierda: Textos del Reporte Desglosado -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+                <h2 class="text-lg font-bold text-indigo-800 mb-2 border-b border-slate-100 pb-3">Textos: Reporte Desglosado (Metodológico)</h2>
+                <p class="text-xs text-slate-500 mb-6">Edita las justificaciones metodológicas que aparecen en la línea de tiempo.</p>
+                
+                <div id="form-desglosado" class="space-y-6">
+                    <!-- Se inyecta con JS -->
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Textos del Dashboard (Index) -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+                <h2 class="text-lg font-bold text-sky-800 mb-2 border-b border-slate-100 pb-3">Textos: Dashboard Pestañas (Index)</h2>
+                <p class="text-xs text-slate-500 mb-6">Edita las interpretaciones cortas que aparecen en las tarjetas del Dashboard interactivo.</p>
+                
+                <div id="form-index" class="space-y-6">
+                    <!-- Se inyecta con JS -->
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Toast de Notificación -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-slate-800 text-white px-6 py-3 rounded-lg shadow-xl font-semibold transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+        ✅ Cambios guardados. Actualiza tus dashboards.
+    </div>
+
+    <script>
+        // Datos por defecto (Basados en las instrucciones metodológicas)
+        const defaultData = {
+            desglosado: {
+                q1: "El objetivo es evaluar la presencia del hábito de lectura por iniciativa propia, lo que permite explorar si la lectura se asume como una actividad voluntaria, lo que aporta información sobre el desarrollo de hábitos culturales y formativos.",
+                q2: "Tiene como finalidad reconocer si los estudiantes invierten tiempo extra fuera de lo obligatorio para reforzar su formación académica.",
+                q3: "La pregunta evalúa si los participantes reconocen una mejora en su comprensión y uso de términos técnicos como resultado de las lecturas realizadas.",
+                q4: "Su propósito es identificar qué fuentes de información favorecen mejor al proceso de aprendizaje y asimilación de contenido.",
+                q5: "Permite analizar factores internos y externos que afectan el hábito lector de los estudiantes y que además condicionan la frecuencia y el interés por la lectura.",
+                q6: "Permite analizar la relación entre el hábito lector y la mejora de calificaciones en distintas áreas de formación administrativa.",
+                q7: "En conjunto, estas respuestas permiten comprender cómo la exigencia de lectura de material complementario influye en la dinámica académica, evidenciando el nivel de demanda que enfrentan los estudiantes. Además, aportan información sobre la importancia que los docentes otorgan a la lectura como herramienta de aprendizaje, lo cual puede incidir en el desarrollo de habilidades analíticas, comprensión de contenidos y fortalecimiento del hábito lector en el contexto educativo.",
+                q8: "Su propósito es comprender cómo los estudiantes vinculan la lectura constante con su desempeño en la interpretación, análisis y resolución de problemas complejos.",
+                q9: "Busca analizar cómo las lecturas de la carrera influyen en el desarrollo del pensamiento crítico de los estudiantes, así como en su capacidad para reflexionar y tomar una postura frente a los dilemas éticos en el ámbito empresarial.",
+                q10: "Se incluye para conocer los factores que limitan el desarrollo de hábitos de lectura especializada en el ámbito académico."
+            },
+            index: {
+                q1: "El 67% de los estudiantes indica no tener un hábito de lectura diario por interés propio.",
+                q2: "El 83% de los encuestados destina menos de cuatro horas semanales a la lectura extracurricular.",
+                q3: "El 100% de los participantes reporta percibir una mejora en su vocabulario técnico.",
+                q4: "El 57% señala que los casos de estudio generan la mayor retención de conceptos.",
+                q5: "El factor condicionante se divide 50/50 entre interés global y carga académica.",
+                q6: "Recursos Humanos y Logística representan el 66% de materias con mayor impacto en notas.",
+                q7: "El 60% evalúa la exigencia de lectura en un nivel 7 sobre 10.",
+                q8: "El 80% identifica la falta de tiempo como el obstáculo principal para investigar."
+            }
+        };
+
+        const titulos = [
+            "1. Interés Propio", "2. Dedicación Extra", "3. Vocabulario", "4. Material de Retención",
+            "5. Factor Condicionante", "6. Áreas de Impacto", "7. Intensidad (1-10)", "8. Simuladores / Problemas",
+            "9. Dilemas Éticos", "10. Obstáculos"
+        ];
+
+        // Lógica de Login
+        function verificarLogin() {
+            const u = document.getElementById('user').value;
+            const p = document.getElementById('pass').value;
+            if (u === 'mar251808' && p === 'Ryzen1@23') {
+                document.getElementById('login-view').classList.add('hidden');
+                document.getElementById('admin-view').classList.remove('hidden');
+                cargarFormularios();
+            } else {
+                document.getElementById('error-msg').classList.remove('hidden');
+            }
+        }
+
+        function cerrarSesion() {
+            document.getElementById('user').value = '';
+            document.getElementById('pass').value = '';
+            document.getElementById('admin-view').classList.add('hidden');
+            document.getElementById('login-view').classList.remove('hidden');
+        }
+
+        // Lógica de Formularios
+        function cargarFormularios() {
+            let data = JSON.parse(localStorage.getItem('uvg_cms_data'));
+            if (!data) { data = defaultData; localStorage.setItem('uvg_cms_data', JSON.stringify(data)); }
+
+            const formDes = document.getElementById('form-desglosado');
+            const formIdx = document.getElementById('form-index');
+            formDes.innerHTML = ''; formIdx.innerHTML = '';
+
+            for (let i = 1; i <= 10; i++) {
+                formDes.innerHTML += `
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">${titulos[i-1]}</label>
+                        <textarea id="des_q${i}" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-600 focus:ring-2 focus:ring-indigo-500 h-24">${data.desglosado['q'+i]}</textarea>
+                    </div>`;
+                
+                // Index solo tiene 8 tarjetas en el original
+                if(i <= 8) {
+                    formIdx.innerHTML += `
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">Tarjeta Dashboard ${i}</label>
+                        <textarea id="idx_q${i}" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-600 focus:ring-2 focus:ring-sky-500 h-16">${data.index['q'+i]}</textarea>
+                    </div>`;
+                }
+            }
+        }
+
+        function guardarCambios() {
+            let newData = { desglosado: {}, index: {} };
+            for(let i=1; i<=10; i++) newData.desglosado['q'+i] = document.getElementById(`des_q${i}`).value;
+            for(let i=1; i<=8; i++) newData.index['q'+i] = document.getElementById(`idx_q${i}`).value;
+            
+            localStorage.setItem('uvg_cms_data', JSON.stringify(newData));
+            
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 3000);
+        }
+    </script>
+</body>
+</html>
